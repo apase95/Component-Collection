@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --color-primary: #132440;
   --color-primary-dark: #16476A;
   
@@ -14,15 +14,13 @@
   --color-glass-border: rgba(255, 255, 255, 0.1);
   --color-glass-highlight: rgba(255, 255, 255, 0.2);
 
-  /* Config Font */
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'Fira Code', monospace;
 }
 
 @layer base {
   body {
-    background-color: #0f172a;
-    color: #e2e8f0;
+    @apply bg-slate-900 text-slate-200;
     font-family: var(--font-sans);
   }
   h1 { @apply text-4xl font-bold tracking-tight text-white; }
@@ -32,6 +30,18 @@
   label { @apply text-sm font-medium text-slate-300 mb-1.5 block; }
 }
 
+/* Container & Section */
+.container-app {
+  @apply max-w-7xl mx-auto px-4;
+}
+.section {
+  @apply py-12;
+}
+.section-sm {
+  @apply py-6;
+}
+
+/* Scroll Bar */
 .custom_scrollbar::-webkit-scrollbar {
   width: 6px;
 }
@@ -41,4 +51,72 @@
 .custom_scrollbar::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+}
+
+/* Flex Layout */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+.flex-col-center {
+  @apply flex-col items-center justify-center;
+}
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+/* Grid Layout */
+.grid-center {
+  @apply grid place-items-center;
+}
+.grid-dashboard {
+  @apply grid grid-cols-[240px_1fr] gap-4;
+}
+.grid-form {
+  @apply grid gap-4;
+}
+
+/* Stack Vertical - Inline */
+.stack {
+  @apply flex flex-col gap-4;
+}
+.stack-sm {
+  @apply flex flex-col gap-2;
+}
+.stack-lg {
+  @apply flex flex-col gap-6;
+}
+.inline {
+  @apply flex items-center gap-2;
+}
+.inline-sm {
+  @apply flex items-center gap-1;
+}
+
+/* Text Utilities */
+.text-muted {
+  @apply text-slate-400;
+}
+.text-emphasis {
+  @apply text-white font-medium;
+}
+.text-truncate {
+  @apply truncate;
+}
+.text-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* Interactive */
+.interactive {
+  @apply transition-colors duration-200 ease-out;
+}
+.interactive-hover {
+  @apply hover:bg-white/5;
+}
+.interactive-focus {
+  @apply focus:outline-none focus:ring-2 focus:ring-accent/40;
 }
