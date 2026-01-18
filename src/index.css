@@ -58,13 +58,19 @@
   @apply flex items-center justify-center;
 }
 .flex-col-center {
-  @apply flex-col items-center justify-center;
+  @apply flex flex-col items-center justify-center;
 }
 .flex-between {
   @apply flex items-center justify-between;
 }
 
 /* Grid Layout */
+.grid-layout {
+  @apply grid min-h-screen;
+}
+.grid-sidebar {
+  grid-template-columns: 240px 1fr;
+}
 .grid-center {
   @apply grid place-items-center;
 }
@@ -119,4 +125,26 @@
 }
 .interactive-focus {
   @apply focus:outline-none focus:ring-2 focus:ring-accent/40;
+}
+.disabled-interactive {
+  @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none;
+}
+.icon-disabled {
+  @apply opacity-50 pointer-events-none;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
