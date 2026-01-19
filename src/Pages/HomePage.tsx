@@ -4,11 +4,12 @@ import { Typography } from "../components/base/Typography";
 import { IconWrapper } from "../components/base/IconWrapper";
 import { GlassImage } from "../components/base/IconWrapper";
 import { FiHeart, FiSettings, FiSearch } from "react-icons/fi";
+import LoginForm from "../components/forms/LoginForm";
 
 export const HomePage = () => {
   return (
     <div className="min-h-screen p-8 space-y-12 container-app">
-      
+
       <div className="text-center space-y-2">
         <Typography variant="h1">Glass UI Kit</Typography>
         <Typography variant="body">
@@ -72,6 +73,8 @@ export const HomePage = () => {
           alt="Demo"
         />
       </section>
+
+      <LoginForm />
     </div>
   );
 };
