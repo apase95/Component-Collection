@@ -35,7 +35,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
                         className={cn(
                             "w-full flex h-10 rounded-lg bg-slate-900/50 border border-slate-700 text-white placeholder:text-slate-500",
                             "interactive-focus focus:border-accent interactive",
-                            "disabled-interactive",
+                            props.disabled && "disabled-interactive",
                             icon ? "pl-10 pr-3" : "px-3",
                             error && "border-red-500 focus:ring-red-500/50",
                             className

@@ -24,7 +24,7 @@ export const Button = ({
     ...props
 }: ButtonProps) => {
   
-    const baseStyle = "flex-center font-medium rounded-lg interactive interactive-focus disabled-interactive"; 
+    const baseStyle = "flex-center font-medium rounded-lg interactive interactive-focus cursor-pointer"; 
     const variants = {
         primary: "bg-primary text-white hover:bg-primary-dark disabled:hover:bg-primary",
         secondary: "bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary",

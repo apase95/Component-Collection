@@ -42,7 +42,7 @@ export const GlassImage = ({ src, alt = "", className }: GlassImageProps
         "shadow-2xl group",
         className
     )}>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent
+        <div className="absolute inset-0 bg-gradient-to from-black/60 to-transparent
                 opacity-0 group-hover:opacity-100 transition-opacity duration-300
                 z-10 pointer-events-none"
         />
