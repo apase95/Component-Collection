@@ -8,8 +8,8 @@ import LoginForm from "../components/forms/LoginForm";
 import { AppBarForm } from "../components/forms/AppBarForm";
 import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "../components/data-display/Avatar";
 import { CgProfile } from "react-icons/cg";
-import { Footer } from "../components/navigation/Footer";
 import { FooterForm } from "../components/forms/FooterForm";
+import { DialogForm } from "../components/forms/DialogForm";
 
 export const HomePage = () => {
   return (
@@ -117,6 +117,8 @@ export const HomePage = () => {
             <p className="text-slate-400">Manage your team settings</p>
           </div>
         </div>
+
+        <DialogForm />
 
         <LoginForm />
 
