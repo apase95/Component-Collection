@@ -2,16 +2,28 @@ import { Input } from "../base/Input";
 import { Avatar, AvatarFallback, AvatarImage } from "../data-display/Avatar";
 import { AppBar, AppBarContainer, AppBarBrand, AppBarNav, AppBarLink, AppBarActions } from "../navigation/AppBar";
 import { CgSearch } from "react-icons/cg";
+import { Tooltip, TooltipTrigger, TooltipContent } from '../overlay/Tooltip';
 
 export const AppBarForm = () => {
     return (
         <AppBar>
             <AppBarContainer>
                 <AppBarBrand>
-                    <div className="w-8 h-8 bg-accent rounded-lg flex-center">
-                        <span className="text-white text-xl">#</span>
-                    </div>
-                    <span>GlassUI</span>
+                    <Tooltip delayDuration={200}>
+                        <TooltipTrigger>
+                            <div className="flex items-center gap-2">
+                                <div className="w-8 h-8 bg-accent rounded-lg flex-center">
+                                    <span className="text-white text-xl">#</span>
+                                </div>
+                                <span>GlassUI</span>
+                            </div>
+                        </TooltipTrigger>
+                        
+                        <TooltipContent side="bottom">
+                            Home
+                        </TooltipContent>
+                    </Tooltip>
+                    
                 </AppBarBrand>
 
                 <AppBarNav>
