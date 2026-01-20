@@ -123,7 +123,7 @@ const TooltipContent = React.forwardRef<
             {...props}
         >
             {children}
-            <div 
+            {/* <div 
                 className={cn(
                     "absolute w-2 h-2 bg-slate-900 rotate-45",
                     "border border-glass-border",
@@ -132,7 +132,7 @@ const TooltipContent = React.forwardRef<
                     side === 'left' && "right-1.25 top-1/2 -translate-y-1/2 border-t border-r",
                     side === 'right' && "left-1.25 top-1/2 -translate-y-1/2 border-b border-l",
                 )}
-            />
+            /> */}
         </div>
     );
 });

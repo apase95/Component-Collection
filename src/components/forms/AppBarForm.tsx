@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../data-display/Avatar";
 import { AppBar, AppBarContainer, AppBarBrand, AppBarNav, AppBarLink, AppBarActions } from "../navigation/AppBar";
 import { CgSearch } from "react-icons/cg";
 import { Tooltip, TooltipTrigger, TooltipContent } from '../overlay/Tooltip';
+import { DropdownMenuForm } from "./DropdownMenuForm";
 
 export const AppBarForm = () => {
     return (
@@ -36,21 +37,7 @@ export const AppBarForm = () => {
                 </AppBarNav>
 
                 <AppBarActions>
-                    <div className="hidden sm:block w-64">
-                        <Input
-                            placeholder="Search..."
-                            icon={<CgSearch />}
-                            className="h-9 bg-slate-800/50 border-slate-700/50"
-                        />
-                    </div>
-
-                    <div className="relative">
-                        <Avatar size="md">
-                            <AvatarImage src="https://github.com/shadcn.png" alt="@user" />
-                            <AvatarFallback>NV</AvatarFallback>
-                        </Avatar>
-                        <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-slate-900 rounded-full"></span>
-                    </div>
+                    <DropdownMenuForm />
                 </AppBarActions>
             </AppBarContainer>
         </AppBar>
