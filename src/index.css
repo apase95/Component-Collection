@@ -60,6 +60,17 @@ label {
   color: #cbd5f5;
 }
 
+
+/* Theme */
+.bg-glass-surface {
+  background-color: var(--glass-surface);
+}
+
+.border-glass-border {
+  border-color: var(--glass-border);
+}
+
+
 /* CONTAINER & SECTION */
 .container-app {
   max-width: 80rem;

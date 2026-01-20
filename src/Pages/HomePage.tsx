@@ -8,6 +8,8 @@ import LoginForm from "../components/forms/LoginForm";
 import { AppBarForm } from "../components/forms/AppBarForm";
 import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "../components/data-display/Avatar";
 import { CgProfile } from "react-icons/cg";
+import { Footer } from "../components/navigation/Footer";
+import { FooterForm } from "../components/forms/FooterForm";
 
 export const HomePage = () => {
   return (
@@ -117,6 +119,8 @@ export const HomePage = () => {
         </div>
 
         <LoginForm />
+
+        <FooterForm />
       </main>
     </div>
   );
