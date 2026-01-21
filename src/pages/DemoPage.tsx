@@ -24,8 +24,9 @@ import { Input } from "../components/base/Input";
 import { FiHeart, FiSearch, FiSettings } from "react-icons/fi";
 import { IconWrapper } from "../components/base/IconWrapper";
 import { GlassImage } from "../components/base/IconWrapper";
-import { Alert } from "../components/overlay/AlertStatus";
+import { Alert } from "../components/feedback/AlertStatus";
 import { SkeletonForm } from "../components/forms/SkeletonForm";
+import { Spinner } from "../components/feedback/Spinner";
 
 export const DemoPage = () => {
     const buttonCode = `<Button variant="primary">Click me</Button>
@@ -167,6 +168,13 @@ export const DemoPage = () => {
                     </Alert>
 
                     <SkeletonForm />
+
+                    <div className="flex items-center justify-center py-6 space-x-4">
+                        <Spinner size="xs" />
+                        <Spinner size="sm" />
+                        <Spinner size="md" />
+                        <Spinner size="lg" />
+                    </div>
                 </div>
             </main>
         </SidebarProvider>

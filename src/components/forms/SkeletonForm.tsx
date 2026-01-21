@@ -1,4 +1,4 @@
-import { SkeletonAvatar, SkeletonButton, SkeletonCard, SkeletonTable, SkeletonText } from "../base/Skeleton";
+import { SkeletonAvatar, SkeletonButton, SkeletonCard, SkeletonTable, SkeletonText } from "../feedback/Skeleton";
 import { Typography } from "../base/Typography";
 
 export const SkeletonForm = () => {

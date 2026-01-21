@@ -11,7 +11,7 @@ import { CgProfile } from "react-icons/cg";
 import { FooterForm } from "../components/forms/FooterForm";
 import { DialogForm } from "../components/forms/DialogForm";
 import { ComponentShowcase, ShowcaseCode, ShowcaseDescription, ShowcaseHeader, ShowcasePreview, ShowcaseTitle, ShowcaseToolbar } from "../components/showcase/ComponentShowCase";
-import { Alert } from "../components/overlay/AlertStatus";
+import { Alert } from "../components/feedback/AlertStatus";
 import { CarouselForm } from "../components/forms/CarouselForm";
 import { MarkDownForm } from "../components/forms/MarkDownForm";
 
