@@ -13,6 +13,7 @@ import { DialogForm } from "../components/forms/DialogForm";
 import { ComponentShowcase, ShowcaseCode, ShowcaseDescription, ShowcaseHeader, ShowcasePreview, ShowcaseTitle, ShowcaseToolbar } from "../components/showcase/ComponentShowCase";
 import { Alert } from "../components/overlay/AlertStatus";
 import { CarouselForm } from "../components/forms/CarouselForm";
+import { MarkDownForm } from "../components/forms/MarkDownForm";
 
 export const HomePage = () => {
 
@@ -140,6 +141,8 @@ export const HomePage = () => {
         </Alert>
 
         <CarouselForm />
+
+        <MarkDownForm />
 
         <DialogForm />
 
