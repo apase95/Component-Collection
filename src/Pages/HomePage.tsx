@@ -10,8 +10,17 @@ import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "../components/
 import { CgProfile } from "react-icons/cg";
 import { FooterForm } from "../components/forms/FooterForm";
 import { DialogForm } from "../components/forms/DialogForm";
+import { ComponentShowcase, ShowcaseCode, ShowcaseDescription, ShowcaseHeader, ShowcasePreview, ShowcaseTitle, ShowcaseToolbar } from "../components/showcase/ComponentShowCase";
+import { Alert } from "../components/overlay/AlertStatus";
+import { CarouselForm } from "../components/forms/CarouselForm";
 
 export const HomePage = () => {
+
+  const buttonCode = `<Button variant="primary">Click me</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="glass">Glass Effect</Button>
+<Button variant="danger">Destructive</Button>`;
+
   return (
     <div className="min-h-screen bg-slate-900">
 
@@ -26,19 +35,27 @@ export const HomePage = () => {
           </Typography>
         </div>
 
-        <section className="space-y-4">
-          <Typography variant="h2">Buttons</Typography>
+        <div className="container-app section space-y-8">
+          <ComponentShowcase code={buttonCode}>
+            <ShowcaseHeader>
+              <div className="flex flex-col">
+                <ShowcaseTitle>Button Component</ShowcaseTitle>
+                <ShowcaseDescription>Basic button variants</ShowcaseDescription>
+              </div>
+              <ShowcaseToolbar />
+            </ShowcaseHeader>
 
-          <div className="flex flex-wrap gap-3">
-            <Button variant="primary">Primary</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="glass">Glass</Button>
-            <Button variant="ghost">Ghost</Button>
-            <Button variant="danger">Danger</Button>
-            <Button isLoading>Loading</Button>
-            <Button size="icon" leftIcon={<FiHeart />} />
-          </div>
-        </section>
+            <ShowcasePreview className="flex flex-wrap gap-4">
+              <Button variant="primary">Primary</Button>
+              <Button variant="secondary">Secondary</Button>
+              <Button variant="glass">Glass</Button>
+              <Button variant="ghost">Ghost</Button>
+              <Button variant="danger">Danger</Button>
+            </ShowcasePreview>
+
+            <ShowcaseCode />
+          </ComponentShowcase>
+        </div>
 
         <section className="space-y-4 max-w-md">
           <Typography variant="h2">Inputs</Typography>
@@ -105,7 +122,7 @@ export const HomePage = () => {
           <div className="relative">
             <Avatar size="xl" shape="square" className="shadow-2xl shadow-accent/20">
               <AvatarImage src="https://invalid-url.com/image.png" alt="Profile" />
-              <AvatarFallback className="!bg-gradient-to-br from-primary to-purple-500">
+              <AvatarFallback className="bg-linear-to-br from-primary to-purple-500">
                 <CgProfile className="text-5xl text-white/50" />
               </AvatarFallback>              
               <AvatarBadge status="online" />
@@ -117,6 +134,12 @@ export const HomePage = () => {
             <p className="text-slate-400">Manage your team settings</p>
           </div>
         </div>
+
+        <Alert variant="success" className="w-fit">
+            <span className="font-medium">Welcome to Glass UI Kit</span>
+        </Alert>
+
+        <CarouselForm />
 
         <DialogForm />
 

@@ -1,7 +1,4 @@
-import { Input } from "../base/Input";
-import { Avatar, AvatarFallback, AvatarImage } from "../data-display/Avatar";
 import { AppBar, AppBarContainer, AppBarBrand, AppBarNav, AppBarLink, AppBarActions } from "../navigation/AppBar";
-import { CgSearch } from "react-icons/cg";
 import { Tooltip, TooltipTrigger, TooltipContent } from '../overlay/Tooltip';
 import { DropdownMenuForm } from "./DropdownMenuForm";
 
