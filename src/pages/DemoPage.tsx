@@ -28,6 +28,7 @@ import { Alert } from "../components/feedback/AlertStatus";
 import { SkeletonForm } from "../components/forms/SkeletonForm";
 import { Spinner } from "../components/feedback/Spinner";
 import { PageLoader } from "../components/feedback/PageLoader";
+import DemoSwitch from "./DemoSwitch";
 
 export const DemoPage = () => {
     const buttonCode = `<Button variant="primary">Click me</Button>
@@ -176,6 +177,8 @@ export const DemoPage = () => {
                         <Spinner size="md" />
                         <Spinner size="lg" />
                     </div>
+
+                    <DemoSwitch />
                 
                     {/* <PageLoader message="Loading..." /> */}
                 
