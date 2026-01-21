@@ -25,6 +25,7 @@ import { FiHeart, FiSearch, FiSettings } from "react-icons/fi";
 import { IconWrapper } from "../components/base/IconWrapper";
 import { GlassImage } from "../components/base/IconWrapper";
 import { Alert } from "../components/overlay/AlertStatus";
+import { SkeletonForm } from "../components/forms/SkeletonForm";
 
 export const DemoPage = () => {
     const buttonCode = `<Button variant="primary">Click me</Button>
@@ -164,6 +165,8 @@ export const DemoPage = () => {
                     <Alert variant="success" className="w-fit">
                         <span className="font-medium">Welcome to Glass UI Kit</span>
                     </Alert>
+
+                    <SkeletonForm />
                 </div>
             </main>
         </SidebarProvider>
