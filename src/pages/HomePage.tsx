@@ -15,6 +15,7 @@ import { Alert } from "../components/overlay/AlertStatus";
 import { CarouselForm } from "../components/forms/CarouselForm";
 import { MarkDownForm } from "../components/forms/MarkDownForm";
 
+
 export const HomePage = () => {
 
   const buttonCode = `<Button variant="primary">Click me</Button>
@@ -26,8 +27,7 @@ export const HomePage = () => {
     <div className="min-h-screen bg-slate-900">
 
       <AppBarForm />
-
-
+      
       <main className="container-app section">
         <div className="text-center space-y-2">
           <Typography variant="h1">Glass UI Kit</Typography>
