@@ -29,6 +29,7 @@ import { SkeletonForm } from "../components/forms/SkeletonForm";
 import { Spinner } from "../components/feedback/Spinner";
 import { PageLoader } from "../components/feedback/PageLoader";
 import DemoSwitch from "./DemoSwitch";
+import { Slider } from "../components/base/Slider";
 
 export const DemoPage = () => {
     const buttonCode = `<Button variant="primary">Click me</Button>
@@ -179,6 +180,14 @@ export const DemoPage = () => {
                     </div>
 
                     <DemoSwitch />
+
+                    <Slider
+                        min={0}
+                        max={100}
+                        defaultValue={30}
+                        size="lg"
+                        showValue
+                    />
                 
                     {/* <PageLoader message="Loading..." /> */}
                 

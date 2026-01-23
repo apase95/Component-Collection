@@ -7,7 +7,7 @@ export default function Demo() {
 
     return (
         <div className="flex-center gap-3 mt-4">
-            <Switch 
+            <Switch
                 checked={active} 
                 onCheckedChange={setActive} 
                 size="lg" 
