@@ -27,12 +27,12 @@ import { GlassImage } from "../components/base/IconWrapper";
 import { Alert } from "../components/feedback/AlertStatus";
 import { SkeletonForm } from "../components/forms/SkeletonForm";
 import { Spinner } from "../components/feedback/Spinner";
-import { PageLoader } from "../components/feedback/PageLoader";
 import DemoSwitch from "./DemoSwitch";
 import { Slider } from "../components/base/Slider";
 import { ScrollAreaForm } from "../components/forms/ScrollAreaForm";
 import SmartImageForm from "../components/forms/SmartImageForm";
 import { MenuBarForm } from "../components/forms/MenuBarForm";
+import { NavigationBarForm } from "../components/forms/NavigationBarForm";
 
 
 export const DemoPage = () => {
@@ -198,6 +198,8 @@ export const DemoPage = () => {
                     <SmartImageForm />
 
                     <MenuBarForm />
+
+                    <NavigationBarForm />
                 
                     {/* <PageLoader message="Loading..." /> */}
                 
