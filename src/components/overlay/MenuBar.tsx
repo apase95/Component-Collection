@@ -9,9 +9,9 @@ interface MenuBarContextType {
 }
 const MenuBarContext = React.createContext<MenuBarContextType | undefined>(undefined);
 const useMenuBar = () => {
-    const context = React.useContext(MenuBarContext);
-    if (!context) throw new Error("MenuBar components must be used within <MenuBar />");
-    return context;
+    const cxt = React.useContext(MenuBarContext);
+    if (!cxt) throw new Error("MenuBar components must be used within <MenuBar />");
+    return cxt;
 };
 
 
@@ -41,7 +41,7 @@ const MenuBar = React.forwardRef<
                 role="menubar"
                 data-menubar-root
                 className={cn(
-                    "flex h-10 items-center space-x-1 rounded-md",
+                    "flex items-center h-10 space-x-1 rounded-md",
                     "border border-white/10 bg-[#18181b] p-1",
                     className
                 )}

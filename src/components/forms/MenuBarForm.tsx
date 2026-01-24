@@ -17,7 +17,7 @@ export const MenuBarForm = () => {
     const [showStatus, setShowStatus] = React.useState(true);
 
     return (
-        <div className="w-full py-10">
+        <div className="w-full">
             <MenuBar>                
                 <MenuBarMenu value="file">
                     <MenuBarTrigger>File</MenuBarTrigger>

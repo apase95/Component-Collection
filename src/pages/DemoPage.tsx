@@ -35,6 +35,8 @@ import { MenuBarForm } from "../components/forms/MenuBarForm";
 import { NavigationBarForm } from "../components/forms/NavigationBarForm";
 import { PasswordForm } from "../components/forms/PasswordForm";
 import { TabsForm } from "../components/forms/TabsForm";
+import { Progress } from "../components/base/Progress";
+import { SelectForm } from "../components/forms/SelectForm";
 
 
 export const DemoPage = () => {
@@ -207,6 +209,23 @@ export const DemoPage = () => {
 
                     <TabsForm />
 
+                    
+                    <div className="w-xl mt-12 space-y-2">
+                        <div className="text-white text-sm">Downloading (75%)</div>
+                        <Progress 
+                            value={75} 
+                            size="lg" 
+                            indicatorClassName="bg-white" 
+                        />
+                        <div className="text-white text-sm">Complete</div>
+                        <Progress 
+                            value={100} 
+                            size="md" 
+                            indicatorClassName="bg-green-400" 
+                        />
+                    </div>
+
+                    <SelectForm />
                 
                     {/* <PageLoader message="Loading..." /> */}
                 
