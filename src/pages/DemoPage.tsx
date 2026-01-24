@@ -32,6 +32,7 @@ import DemoSwitch from "./DemoSwitch";
 import { Slider } from "../components/base/Slider";
 import { ScrollAreaForm } from "../components/forms/ScrollAreaForm";
 import SmartImageForm from "../components/forms/SmartImageForm";
+import { MenuBarForm } from "../components/forms/MenuBarForm";
 
 
 export const DemoPage = () => {
@@ -195,6 +196,8 @@ export const DemoPage = () => {
                     <ScrollAreaForm />
 
                     <SmartImageForm />
+
+                    <MenuBarForm />
                 
                     {/* <PageLoader message="Loading..." /> */}
                 
