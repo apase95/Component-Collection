@@ -33,6 +33,8 @@ import { ScrollAreaForm } from "../components/forms/ScrollAreaForm";
 import SmartImageForm from "../components/forms/SmartImageForm";
 import { MenuBarForm } from "../components/forms/MenuBarForm";
 import { NavigationBarForm } from "../components/forms/NavigationBarForm";
+import { PasswordForm } from "../components/forms/PasswordForm";
+import { TabsForm } from "../components/forms/TabsForm";
 
 
 export const DemoPage = () => {
@@ -200,6 +202,11 @@ export const DemoPage = () => {
                     <MenuBarForm />
 
                     <NavigationBarForm />
+
+                    <PasswordForm />
+
+                    <TabsForm />
+
                 
                     {/* <PageLoader message="Loading..." /> */}
                 
