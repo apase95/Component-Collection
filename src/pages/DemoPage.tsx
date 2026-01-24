@@ -31,6 +31,8 @@ import { PageLoader } from "../components/feedback/PageLoader";
 import DemoSwitch from "./DemoSwitch";
 import { Slider } from "../components/base/Slider";
 import { ScrollAreaForm } from "../components/forms/ScrollAreaForm";
+import SmartImageForm from "../components/forms/SmartImageForm";
+
 
 export const DemoPage = () => {
     const buttonCode = `<Button variant="primary">Click me</Button>
@@ -191,6 +193,8 @@ export const DemoPage = () => {
                     />
 
                     <ScrollAreaForm />
+
+                    <SmartImageForm />
                 
                     {/* <PageLoader message="Loading..." /> */}
                 
