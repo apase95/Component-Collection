@@ -30,6 +30,7 @@ import { Spinner } from "../components/feedback/Spinner";
 import { PageLoader } from "../components/feedback/PageLoader";
 import DemoSwitch from "./DemoSwitch";
 import { Slider } from "../components/base/Slider";
+import { ScrollAreaForm } from "../components/forms/ScrollAreaForm";
 
 export const DemoPage = () => {
     const buttonCode = `<Button variant="primary">Click me</Button>
@@ -188,6 +189,8 @@ export const DemoPage = () => {
                         size="lg"
                         showValue
                     />
+
+                    <ScrollAreaForm />
                 
                     {/* <PageLoader message="Loading..." /> */}
                 

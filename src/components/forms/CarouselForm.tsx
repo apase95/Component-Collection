@@ -2,7 +2,7 @@ import { Card } from "../data-display/Card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../data-display/Carousel";
 
 export const CarouselForm = () => {
-    const items = [1, 2, 3, 4, 5];
+    const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     return (
         <div className="flex-center min-h-100 bg-transparent p-10">
