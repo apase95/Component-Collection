@@ -109,7 +109,7 @@ const ScrollContent = React.forwardRef<
     <div
         ref={ref}
         className={cn(
-            "min-w-full block", 
+            "min-w-full block",
             className
         )}
         {...props}

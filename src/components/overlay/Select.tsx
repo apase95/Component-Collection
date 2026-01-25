@@ -1,6 +1,6 @@
 import * as React from "react";
-import { FaCheck, FaChevronDown } from "react-icons/fa6";
 import { cn } from "../../libs/utils";
+import { FaCheck, FaChevronDown } from "react-icons/fa6";
 
 
 interface SelectContextValue {
@@ -117,7 +117,7 @@ const SelectTrigger = React.forwardRef<
                 "w-full h-10 flex-between rounded-md",
                 "px-4 py-2 text-sm",
                 "bg-[#18181b] border border-white/10 text-slate-200 shadow-sm",
-                "hover:bg-white/5 hover:border-white/20 transition-colors",
+                "hover:bg-[#333333]/95 hover:border-white/20 transition-colors",
                 "focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/20",
                 "disabled:cursor-not-allowed disabled:opacity-50",
                 className
@@ -226,7 +226,7 @@ const SelectItem = React.forwardRef<
             }}
             {...props}
         >
-            <span className="absolute left-2 flex-center h-3.5 w-3.5 text-white">
+            <span className="absolute right-3.5 h-3.5 w-3.5 flex-center text-white">
                 {isSelected && <FaCheck className="h-3 w-3" />}
             </span>            
             <span className="truncate">{children}</span>

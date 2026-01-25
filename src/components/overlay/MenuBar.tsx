@@ -102,7 +102,7 @@ const MenuBarTrigger = React.forwardRef<
             data-state={isOpen ? "open" : "closed"}
             className={cn(
                 "flex items-center rounded-sm px-3 py-1.5",
-                "cursor-default select-none",
+                "cursor-pointer select-none",
                 "text-sm font-medium outline-none transition-colors",
                 "text-slate-400 hover:bg-white/5 hover:text-white",
                 "focus:bg-white/5 focus:text-white",

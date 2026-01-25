@@ -133,7 +133,7 @@ const NavigationMenuTrigger = React.forwardRef<
             data-state={isOpen ? "open" : "closed"}
             className={cn(
                 "group flex-center flex-col h-9 w-max rounded-md px-4 py-2", 
-                "text-sm font-medium transition-colors",
+                "text-sm font-medium transition-colors cursor-pointer select-none",
                 "text-slate-400 hover:bg-white/5 hover:text-white",
                 "focus:bg-white/5 focus:text-white focus:outline-none",
                 "data-[state=open]:bg-white/10 data-[state=open]:text-white",
@@ -192,7 +192,7 @@ const NavigationMenuLink = React.forwardRef<
             ref={ref}
             className={cn(
                 "group flex-center flex-col h-9 w-max rounded-md px-4 py-2", 
-                "text-sm font-medium transition-colors",
+                "text-sm font-medium transition-colors cursor-pointer select-none",
                 "text-slate-400 hover:bg-white/5 hover:text-white",
                 "focus:bg-white/5 focus:text-white focus:outline-none",
                 className
