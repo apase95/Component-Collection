@@ -22,6 +22,7 @@ import { PasswordForm } from "../components/forms/PasswordForm";
 import { TabsForm } from "../components/forms/TabsForm";
 import { Progress } from "../components/base/Progress";
 import { SelectForm } from "../components/forms/SelectForm";
+import { PaginationForm } from "../components/forms/PaginationForm";
 
 
 export const DemoPage = () => {
@@ -118,6 +119,8 @@ export const DemoPage = () => {
                     </div>
 
                     <SelectForm />
+
+                    <PaginationForm />
                 
                     {/* <PageLoader message="Loading..." /> */}
                 
