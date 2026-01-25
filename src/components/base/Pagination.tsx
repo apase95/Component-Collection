@@ -72,14 +72,15 @@ const PaginationLink = React.forwardRef<
         aria-current={isActive ? "page" : undefined}
         className={cn(
             "flex-center whitespace-nowrap rounded-md",
-            "text-sm font-medium transition-colors cursor-pointer select-none",
+            "text-sm font-medium border border-transparent",
+            "transition-colors cursor-pointer select-none",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20",
             size === "default" && "h-9 px-4 py-2",
             size === "sm" && "h-8 px-3",
             size === "icon" && "h-9 w-9",
             isActive 
-                ? "bg-white/10 text-white border border-white/10 shadow-sm" 
-                : "text-slate-400 hover:bg-white/5 hover:text-white border border-transparent",    
+                ? "bg-[#18181b] text-white border-white/10 shadow-sm" 
+                : "text-slate-400 hover:bg-[#18181b] hover:text-white hover:border-white/10",    
             className
         )}
         {...props}
@@ -141,7 +142,7 @@ const PaginationEllipsis = React.forwardRef<
         ref={ref}
         aria-hidden
         className={cn(
-            "w-9 h-9 flex-center text-slate-500", 
+            "w-9 h-9 flex-center text-slate-400",
             className
         )}
         {...props}

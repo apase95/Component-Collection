@@ -34,7 +34,6 @@ export const PaginationForm = () => {
 
     return (
         <div className="flex-col-center p-10 gap-4">
-
             <Pagination>
                 <PaginationContent>                    
                     <PaginationItem>
@@ -84,7 +83,6 @@ export const PaginationForm = () => {
                             }
                         />
                     </PaginationItem>
-
                 </PaginationContent>
             </Pagination>
         </div>
