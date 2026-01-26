@@ -27,7 +27,14 @@ interface ComponentShowcaseProps extends React.HTMLAttributes<HTMLDivElement> {
 const ComponentShowcase = React.forwardRef<
     HTMLDivElement, 
     ComponentShowcaseProps
->(({ className, code, mode: controlledMode, onModeChange, children, ...props }, ref) => {
+>(({ 
+    className, 
+    code, 
+    mode: controlledMode, 
+    onModeChange, 
+    children, 
+    ...props 
+}, ref) => {
     
     const [uncontrolledMode, setUncontrolledMode] = React.useState<ViewMode>("preview");
     const isControlled = controlledMode !== undefined;
@@ -39,8 +46,8 @@ const ComponentShowcase = React.forwardRef<
             <div
                 ref={ref}
                 className={cn(
-                    "group relative flex flex-col w-full overflow-hidden rounded-xl",
-                    "border border-glass-border bg-glass-surface shadow-sm",
+                    "group relative w-full flex flex-col overflow-hidden rounded-xl",
+                    "bg-primary-theme border border-secondary-theme shadow-sm",
                     className
                 )}
                 {...props}
@@ -56,12 +63,17 @@ ComponentShowcase.displayName = "ComponentShowcase";
 const ShowcaseHeader = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
->(({ className, children, ...props }, ref) => (
+>(({ 
+    className, 
+    children, 
+    ...props 
+}, ref) => (
+
     <div
         ref={ref}
         className={cn(
-            "flex items-center justify-between",
-            "border-b border-glass-border px-4 py-3",
+            "flex-between px-4 py-3",
+            "border-b border-secondary-theme",
             "bg-white/5 backdrop-blur-sm", 
             className
         )}
@@ -121,8 +133,11 @@ const ShowcaseToolbar = React.forwardRef<
             setCopied(false);
         }
     };
-    const baseBtn = "p-2 rounded-md transition-colors hover:bg-white/10 text-slate-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-accent";
-    const activeBtn = "bg-white/10 text-accent shadow-sm ring-1 ring-white/10";
+    const baseBtn = 
+        "p-2 text-slate-400 rounded-md transition-colors"
+        + "hover:bg-white/10 hover:text-white !cursor-pointer" 
+        + "focus:outline-none focus:ring-2 focus:ring-secondary-theme";
+    const activeBtn = "bg-primary-theme text-slate-200 shadow-sm ring-1 ring-white/10 cursor-pointer";
 
     return (
         <div 
@@ -138,7 +153,7 @@ const ShowcaseToolbar = React.forwardRef<
                 onClick={() => setMode("preview")}
                 className={cn(baseBtn, mode === "preview" && activeBtn)}
             >
-                <CgEye className="h-6 w-6" />
+                <CgEye className="h-6 w-6 cursor-pointer" />
             </button>
 
             <button
@@ -148,10 +163,10 @@ const ShowcaseToolbar = React.forwardRef<
                 onClick={() => setMode("code")}
                 className={cn(baseBtn, mode === "code" && activeBtn)}
             >
-                <CgCodeSlash className="h-6 w-6" />
+                <CgCodeSlash className="h-6 w-6 cursor-pointer" />
             </button>
 
-            <div className="mx-2 h-8 w-px bg-glass-border" />
+            <div className="mx-2 h-8 w-px bg-secondary-theme" />
 
             <button
                 aria-label="Copy code"
@@ -159,9 +174,9 @@ const ShowcaseToolbar = React.forwardRef<
                 className={baseBtn}
             >
                 {copied ? (
-                    <CgCheck className="h-6 w-6 text-green-400" />
+                    <CgCheck className="h-6 w-6 text-slate-200 cursor-pointer" />
                 ) : (
-                    <CgCopy className="h-6 w-6" />
+                    <CgCopy className="h-6 w-6 cursor-pointer" />
                 )}
             </button>
         </div>

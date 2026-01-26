@@ -9,7 +9,6 @@ import {
     DialogTrigger,
 } from "../overlay/Dialog";
 import { Button } from "../base/Button";
-import { CgProfile } from "react-icons/cg";
 import { Input } from "../base/Input";
 
 export const DialogForm = () => {
@@ -37,7 +36,7 @@ export const DialogForm = () => {
                             <label htmlFor="name" className="text-right text-sm text-slate-300">
                                 Name
                             </label>
-                            <Input id="name" defaultValue="Nguyen Van A" wrapperClassName="col-span-3" />
+                            <Input id="name" defaultValue="Ho Dang Thai Duy" wrapperClassName="col-span-3" />
                         </div>
                         <div className="grid grid-cols-4 items-center gap-4">
                             <label htmlFor="username" className="text-right text-sm text-slate-300">
@@ -45,18 +44,25 @@ export const DialogForm = () => {
                             </label>
                             <Input
                                 id="username"
-                                defaultValue="@nguyenvana"
+                                defaultValue="@hodangthaiduy"
                                 wrapperClassName="col-span-3"
-                                icon={<CgProfile />}
+                                // icon={<CgProfile />}
                             />
                         </div>
                     </div>
 
                     <DialogFooter>
-                        <Button variant="ghost" onClick={() => setOpen(false)}>
+                        <Button 
+                            variant="ghost" 
+                            onClick={() => setOpen(false)}
+                        >
                             Cancel
                         </Button>
-                        <Button type="submit" onClick={handleSave}>
+                        <Button 
+                            type="submit" 
+                            onClick={handleSave}
+                            className="bg-[#202020]"
+                        >
                             Save
                         </Button>
                     </DialogFooter>

@@ -20,9 +20,9 @@ export default function LoginForm() {
                     </form>
                 </CardContent>
 
-                <CardFooter className="flex justify-between">
+                <CardFooter className="flex justify-end space-x-3">
                     <Button variant="ghost">Cancel</Button>
-                    <Button>Login</Button>
+                    <Button className="bg-[#202020]">Login</Button>
                 </CardFooter>
             </Card>
         </div>

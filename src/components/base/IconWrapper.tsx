@@ -15,9 +15,9 @@ export const IconWrapper = ({
     return (
         <Component
             className={cn(
-                "flex-center flex-col rounded-lg p-2 text-slate-400",
+                "flex-center flex-row rounded-lg p-2 text-slate-200",
                 "transition-colors",
-                !disabled && "hover:text-white hover:bg-white/10 cursor-pointer",
+                !disabled && "hover:text-white hover:bg-secondary-theme cursor-pointer",
                 disabled && "opacity-50 pointer-events-none",
                 className
             )}

@@ -76,7 +76,7 @@ const DialogOverlay = React.forwardRef<
             ref={ref}
             onClick={() => setOpen(false)}
             className={cn(
-                "fixed inset-0 z-50 bg-black/60 backdrop-blur-sm",
+                "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm",
                 "animate-in fade-in duration-300",
                 className
             )}
@@ -127,7 +127,7 @@ const DialogContent = React.forwardRef<
                 onClick={(e) => e.stopPropagation()}
                 className={cn(
                     "fixed z-50 grid w-full max-w-lg gap-4 p-6",
-                    "bg-glass-surface border border-glass-border shadow-2xl",
+                    "bg-primary-theme border border-secondary-theme shadow-2xl",
                     "sm:rounded-xl",
                     "animate-in fade-in zoom-in-95 slide-in-from-bottom-10 sm:slide-in-from-bottom-0",
                     className
@@ -140,7 +140,7 @@ const DialogContent = React.forwardRef<
                     onClick={() => setOpen(false)}
                     className={cn(
                         "absolute right-4 top-4 rounded-sm p-1",
-                        "text-slate-400 hover:text-white",
+                        "text-slate-300 hover:text-white",
                         "focus:outline-none focus:ring-2 focus:ring-accent",
                     )}
                 >

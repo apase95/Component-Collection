@@ -9,8 +9,9 @@ const Footer = React.forwardRef<
     <footer
         ref={ref}
         className={cn(
-            "w-full border-t border-glass-border bg-black/20 backdrop-blur-lg pt-12 pb-8",
-            "text-slate-400",
+            "w-full pt-12 pb-8",
+            "text-slate-300 bg-primary-theme backdrop-blur-lg",
+            "border-t border-secondary-theme",
             className
         )}
         {...props}
@@ -90,8 +91,8 @@ const FooterLink = React.forwardRef<
     <a
         ref={ref}
         className={cn(
-            "text-sm decoration-accent/30 underline-offset-4",
-            "cursor-pointer hover:text-accent hover:underline transition-all",
+            "text-sm underline-offset-4",
+            "cursor-pointer hover:text-white hover:underline transition-all",
             className
         )}
         {...props}
@@ -107,7 +108,8 @@ const FooterBottom = React.forwardRef<
     <div
         ref={ref}
         className={cn(
-            "flex-center flex-col md:flex-row gap-4 pt-8 border-t border-glass-border",
+            "flex-center flex-col md:flex-row gap-4 pt-8",
+            "border-t border-secondary-theme",
             className
         )}
         {...props}

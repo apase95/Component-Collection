@@ -165,6 +165,7 @@ const CarouselControl = React.forwardRef<
             onClick={onClick}
             className={cn(
                 "absolute top-1/2 -translate-y-1/2 z-10 rounded-full",
+                "text-slate-300 bg-primary-theme hover:bg-secondary-theme/50",
                 isPrev ? "left-4" : "right-4",
                 "disabled:opacity-0 disabled:pointer-events-none transition-opacity",
                 className
@@ -185,7 +186,12 @@ const CarouselPrevious = React.forwardRef<
     HTMLButtonElement,
     React.ButtonHTMLAttributes<HTMLButtonElement>
 >((props, ref) => (
-    <CarouselControl ref={ref} direction="prev" {...props} />
+    
+    <CarouselControl 
+        ref={ref} 
+        direction="prev" 
+        {...props} 
+    />
 ));
 CarouselPrevious.displayName = "CarouselPrevious";
 
@@ -194,7 +200,12 @@ const CarouselNext = React.forwardRef<
     HTMLButtonElement,
     React.ButtonHTMLAttributes<HTMLButtonElement>
 >((props, ref) => (
-    <CarouselControl ref={ref} direction="next" {...props} />
+    
+    <CarouselControl 
+        ref={ref} 
+        direction="next" 
+        {...props} 
+    />
 ));
 CarouselNext.displayName = "CarouselNext";
 

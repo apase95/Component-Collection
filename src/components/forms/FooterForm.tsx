@@ -2,6 +2,7 @@ import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import { Button } from "../base/Button";
 import { Input } from "../base/Input";
 import { Footer, FooterBottom, FooterColumn, FooterContainer, FooterGrid, FooterLink, FooterTitle } from "../navigation/Footer";
+import { Typography } from "../base/Typography";
 
 export const FooterForm = () => {
     return (
@@ -15,7 +16,7 @@ export const FooterForm = () => {
                             </div>
                             <span className="text-xl font-bold text-white">GlassUI</span>
                         </div>
-                        <p className="text-sm leading-relaxed max-w-xs text-slate-400">
+                        <p className="text-sm leading-relaxed max-w-xs text-slate-300">
                             Build modern web interfaces with elegant frosted-glass effects, optimized for user experience
                             across all platforms.
                         </p>
@@ -40,7 +41,10 @@ export const FooterForm = () => {
                     <FooterColumn className="col-span-2 lg:col-span-1">
                         <FooterTitle>Newsletter</FooterTitle>
                         <div className="flex flex-col gap-2">
-                            <Input placeholder="Email của bạn..." className="bg-slate-950/50 border-slate-800" />
+                            <Input 
+                                placeholder="Email của bạn..." 
+                                className="bg-primary-theme border-secondary-theme text-white" 
+                            />
                             <Button size="sm" variant="secondary">
                                 Subscribe
                             </Button>
@@ -49,7 +53,9 @@ export const FooterForm = () => {
                 </FooterGrid>
 
                 <FooterBottom>
-                    <p className="text-sm">&copy; 2024 GlassUI Inc. All rights reserved.</p>
+                    <Typography variant="body" className="text-md text-white">
+                        &copy; 2024 GlassUI Inc. All rights reserved.
+                    </Typography>
 
                     <div className="flex items-center gap-4">
                         <Button variant="ghost" size="icon" className="rounded-full">
