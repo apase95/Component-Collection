@@ -14,6 +14,7 @@ import { ComponentShowcase, ShowcaseCode, ShowcaseDescription, ShowcaseHeader, S
 import { Alert } from "../components/feedback/AlertStatus";
 import { CarouselForm } from "../components/forms/CarouselForm";
 import { MarkDownForm } from "../components/forms/MarkDownForm";
+import { UploadForm } from "../components/forms/UploadForm";
 
 
 export const HomePage = () => {
@@ -145,6 +146,8 @@ export const HomePage = () => {
         <MarkDownForm />
 
         <DialogForm />
+
+        <UploadForm />
 
         <LoginForm />
 
