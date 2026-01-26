@@ -30,7 +30,7 @@ export const HomePage = () => {
       
       <main className="container-app section">
         <div className="text-center space-y-2">
-          <Typography variant="h1">Glass UI Kit</Typography>
+          <Typography variant="h1">UI Kit</Typography>
           <Typography variant="body">
             Component collection for developers
           </Typography>

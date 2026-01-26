@@ -12,7 +12,7 @@ export const SkeletonForm = () => {
                 </div>
             </div>
 
-            <div className="bg-glass-surface p-6 rounded-xl border border-glass-border">
+            <div className="bg-primary-theme p-6 rounded-xl border border-secondary-theme">
                 <SkeletonText lines={6} />
                 <div className="mt-6 flex gap-4">
                     <SkeletonButton />

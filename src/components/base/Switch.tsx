@@ -59,8 +59,8 @@ const Switch = React.forwardRef<
                 "rounded-full transition-colors duration-200",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50",
                 checked
-                    ? "bg-primary"
-                    : "bg-slate-700 hover:bg-slate-600",
+                    ? "bg-slate-500"
+                    : "bg-neutral-700 hover:bg-neutral-600",
                 disabled && "opacity-50 cursor-not-allowed",
                 sizes[size].track,
                 className

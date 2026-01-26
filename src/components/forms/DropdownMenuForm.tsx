@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "../data-display/Avatar"
+import { Avatar, AvatarBadge, AvatarFallback, AvatarImage } from "../data-display/Avatar"
 import { DropdownMenu, 
     DropdownMenuTrigger, 
     DropdownMenuContent, 
@@ -12,9 +12,14 @@ export const DropdownMenuForm = () => {
   return (
     <DropdownMenu>
         <DropdownMenuTrigger>
-            <Avatar size="md" className="cursor-pointer hover:ring-2 hover:ring-accent transition-all">
+            <Avatar
+                shape="circle" 
+                size="md" 
+                className="cursor-pointer rounded-full hover:ring-2 hover:ring-white/40 transition-all"
+            >
                 <AvatarImage src="https://github.com/shadcn.png" />
-                <AvatarFallback>CN</AvatarFallback>
+                <AvatarFallback>N</AvatarFallback>
+                <AvatarBadge status="online" />
             </Avatar>
         </DropdownMenuTrigger>
 

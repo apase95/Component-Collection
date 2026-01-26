@@ -34,13 +34,19 @@ const Avatar = React.forwardRef<
             <div
                 ref={ref}
                 className={cn(
-                    "relative flex shrink-0 overflow-hidden bg-glass-surface shadow-sm ring-1 ring-glass-border",
-                    shape === "circle" ? "rounded-full" : "rounded-xl",
+                    "relative flex shrink-0 overflow-visible",
                     sizeClasses[size],
                     className,
                 )}
                 {...props}
-            />
+            >
+                <div className={cn(
+                    "flex h-full w-full bg-primary-theme overflow-hidden shadow-sm ring-1 ring-white/10",
+                    shape === "circle" ? "rounded-full" : "rounded-xl",
+                )}>
+                    {props.children}
+                </div>
+            </div>
         </AvatarContext.Provider>
     );
 });
@@ -114,9 +120,9 @@ const AvatarBadge = React.forwardRef<
         away: "bg-yellow-500",
     };
 
-    const position = shape === "circle" 
-        ? "bottom-0 right-0 translate-x-[-10%] translate-y-[-10%]" 
-        : "bottom-0 right-0 translate-x-[20%] translate-y-[20%]";
+    const position = shape === "circle"
+        ? "bottom-0 right-0"
+        : "bottom-[-2px] right-[-2px]";
 
     return (
         <div
@@ -140,7 +146,11 @@ const AvatarGroup = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
     <div
         ref={ref}
-        className={cn("flex items-center -space-x-3 hover:space-x-1 transition-all duration-300", className)}
+        className={cn(
+            "flex items-center -space-x-3", 
+            "hover:space-x-1 transition-all duration-300", 
+            className
+        )}
         {...props}
     >
         {children}

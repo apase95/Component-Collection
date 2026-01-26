@@ -15,7 +15,7 @@ const sizeClasses = {
 };
 
 const variantClasses = {
-    default: "text-slate-400",
+    default: "text-white",
     primary: "text-primary",
     white: "text-white",
 };
@@ -23,14 +23,19 @@ const variantClasses = {
 export const Spinner = React.forwardRef<
     HTMLDivElement,
     SpinnerProps
->(({ size = "md", variant = "default", className, ...props }, ref) => {
+>(({ 
+    size = "md", 
+    variant = "default", 
+    className, 
+    ...props 
+}, ref) => {
     return (
         <div
             ref={ref}
             role="status"
             aria-label="Loading"
             className={cn(
-                "inline-flex items-center justify-center animate-spin",
+                "flex-center flex animate-spin",
                 sizeClasses[size],
                 variantClasses[variant],
                 className

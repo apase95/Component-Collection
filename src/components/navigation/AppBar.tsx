@@ -10,8 +10,8 @@ const AppBar = React.forwardRef<
         ref={ref}
         className={cn(
             "sticky top-0 z-50 w-full",
-            "border-b border-glass-border",
-            "bg-slate-900/80 backdrop-blur-xl",
+            "border-b border-secondary-theme",
+            "bg-primary-theme backdrop-blur-xl",
             "transition-all duration-300",
             className
         )}
@@ -28,7 +28,7 @@ const AppBarContainer = React.forwardRef<
     <div
         ref={ref}
         className={cn(
-            "container-app h-16 flex-center gap-4",
+            "w-full h-16 flex-center gap-4",
             className
         )}
         {...props}
@@ -80,7 +80,7 @@ const AppBarLink = React.forwardRef<
         ref={ref}
         className={cn(
             "text-sm font-medium transition-colors hover:text-white cursor-pointer",
-            active ? "text-accent" : "text-slate-400",
+            active ? "text-white" : "text-slate-400",
             className
         )}
         {...props}

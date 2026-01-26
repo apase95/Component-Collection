@@ -104,7 +104,7 @@ const Sidebar = React.forwardRef<
                     aria-expanded={mobileOpen}
                     className={cn(
                         "fixed top-0 left-0 z-50 h-screen w-64",
-                        "bg-glass-surface border-r border-glass-border",
+                        "bg-primary-theme border-r border-secondary-theme",
                         "transition-transform duration-300 ease-in-out",
                         mobileOpen ? "translate-x-0" : "-translate-x-full",
                         className
@@ -125,7 +125,7 @@ const Sidebar = React.forwardRef<
             data-expanded={expanded}
             className={cn(
                 "sticky top-0 z-30 h-screen",
-                "border-r border-glass-border bg-glass-surface",
+                "border-r border-secondary-theme bg-primary-theme",
                 "transition-all duration-300 ease-in-out",
                 expanded ? "w-64" : "w-20",
                 className
@@ -144,7 +144,11 @@ Sidebar.displayName = "Sidebar";
 const SidebarHeader = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
->(({ className, children, ...props }, ref) => {
+>(({ 
+    className, 
+    children, 
+    ...props 
+}, ref) => {
 
     const { expanded } = useSidebar();
     
@@ -152,7 +156,8 @@ const SidebarHeader = React.forwardRef<
         <div
             ref={ref}
             className={cn(
-                "flex h-16 items-center border-b border-glass-border px-4 transition-all",
+                "h-16 flex items-center px-4 overflow-hidden",
+                "border-b border-secondary-theme transition-all",
                 expanded ? "justify-start" : "justify-center",
                 className
             )}
@@ -189,7 +194,13 @@ interface SidebarItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement>
 const SidebarItem = React.forwardRef<
     HTMLButtonElement, 
     SidebarItemProps
->(({ className, icon, children, active, ...props }, ref) => {
+>(({ 
+    className, 
+    icon, 
+    children, 
+    active, 
+    ...props 
+}, ref) => {
         
     const { expanded } = useSidebar();
 
@@ -197,13 +208,14 @@ const SidebarItem = React.forwardRef<
         <button
             ref={ref}
             className={cn(
-                "group flex w-full items-center gap-3 rounded-md",
+                "group flex w-full min-h-10 items-center gap-3 rounded-md",
                 "px-3 py-2 text-sm font-medium transition-colors mx-auto",
                 active 
-                    ? "bg-accent/10 text-accent" 
+                    ? "bg-white/10 text:white" 
                     : "text-slate-400 hover:bg-white/5 hover:text-white",
-                !expanded && "justify-center px-2", 
-                expanded ? "mb-1 w-[92%]" : "mb-2 w-10 h-10 p-0",
+                expanded 
+                    ? "px-3 gap-3 w-[92%] mb-1 justify-start" 
+                    : "px-0 w-10 h-10 mb-2 justify-center",
                 className
             )}
             title={!expanded && typeof children === 'string' ? children : undefined}
@@ -211,8 +223,8 @@ const SidebarItem = React.forwardRef<
         >
             {icon && (
                 <span className={cn(
-                    "text-lg shrink-0", 
-                    active ? "text-accent" : "text-slate-400 group-hover:text-white"
+                    "flex-center text-xl shrink-0", 
+                    active ? "text-white" : "text-slate-400 group-hover:text-white"
                 )}>
                     {icon}
                 </span>
@@ -232,18 +244,30 @@ SidebarItem.displayName = "SidebarItem";
 
 
 const SidebarFooter = React.forwardRef<
-    HTMLDivElement,
+    HTMLDivElement, 
     React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-    <div
-        ref={ref}
-        className={cn(
-            "mt-auto border-t border-glass-border p-4", 
-            className
-        )}
-        {...props}
-    />
-));
+>(({ 
+    className, 
+    children, 
+    ...props 
+}, ref) => {
+    
+    const { expanded } = useSidebar();
+    
+    return (
+        <div
+            ref={ref}
+            className={cn(
+                "mt-auto border-t border-secondary-theme p-4 overflow-hidden",
+                !expanded && "flex justify-center px-2", 
+                className
+            )}
+            {...props}
+        >
+            {children}
+        </div>
+    );
+});
 SidebarFooter.displayName = "SidebarFooter";
 
 

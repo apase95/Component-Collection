@@ -23,16 +23,20 @@ import { TabsForm } from "../components/forms/TabsForm";
 import { Progress } from "../components/base/Progress";
 import { SelectForm } from "../components/forms/SelectForm";
 import { PaginationForm } from "../components/forms/PaginationForm";
+import { Button } from "../components/base/Button";
 
 
 export const DemoPage = () => {
+
+    
 
     return (
         <SidebarProvider>
             <Sidebar>
                 <SidebarHeader>
                     <div className="flex items-center gap-2 font-bold text-white text-xl overflow-hidden">
-                        <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center shrink-0">UI</div>
+                        <Button className="w-8 h-8 bg-accent text-white text-md font-semibold rounded-lg flex-center shrink-0">UI</Button>
+                        <div className="w-8 h-8 px-2 flex-center">Kit</div>
                     </div>
                 </SidebarHeader>
 
@@ -60,7 +64,7 @@ export const DemoPage = () => {
             </Sidebar>
 
             <main className="flex-1 min-w-0 bg-slate-950">
-                <header className="h-16 border-b border-glass-border flex items-center px-4 bg-glass-surface sticky top-0 z-20">
+                <header className="h-16 border-b border-secondary-theme flex items-center px-4 bg-primary-theme sticky top-0 z-20">
                     <SidebarTrigger />
                     <h1 className="ml-4 text-lg font-semibold text-white">Dashboard</h1>
                 </header>
