@@ -6,15 +6,15 @@ export const CarouselForm = () => {
 
     return (
         <div className="flex-center min-h-100 bg-transparent p-10">
-            <div className="w-full max-w-4xl px-10">
+            <div className="w-full px-10">
                 <Carousel>
                     <CarouselContent>
                         {items.map((item) => (
-                            <CarouselItem key={item} className="basis-1/2 md:basis-1/3">
+                            <CarouselItem key={item} className="basis-1/2 md:basis-1/4">
                                 <div className="p-1">
-                                <Card className="aspect-3/4 flex items-center justify-center bg-[#111] border-[#333]">
-                                    <span className="text-4xl font-bold text-white">{item}</span>
-                                </Card>
+                                    <Card className="aspect-3/4 flex-center bg-primary-theme border-secondary-theme">
+                                        <span className="text-4xl font-bold text-white">{item}</span>
+                                    </Card>
                                 </div>
                             </CarouselItem>
                         ))}
@@ -25,5 +25,5 @@ export const CarouselForm = () => {
                 </Carousel>
             </div>
         </div>
-  );
+    );
 }

@@ -26,9 +26,9 @@ export default function SmartImageForm() {
                     <CardHeader>
                         <h3 className="font-semibold">Beautiful Image</h3>
                     </CardHeader>
-                    <CardContent className="text-sm text-slate-400">
+                    <CardContent className="flex-start space-y-6 text-sm text-slate-400">
                         <SkeletonText show={false} />
-                        No layout shift - smooth loading
+                        <span>No layout shift - smooth loading</span>
                     </CardContent>
                 </Card>
             </section>

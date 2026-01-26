@@ -25,7 +25,7 @@ export const HomePage = () => {
 <Button variant="danger">Destructive</Button>`;
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-neutral-950">
 
       <AppBarForm />
       
@@ -65,7 +65,6 @@ export const HomePage = () => {
           <Input
             label="Email"
             placeholder="you@example.com"
-            icon={<FiSearch />}
           />
 
           <Input

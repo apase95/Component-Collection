@@ -127,7 +127,7 @@ const Sidebar = React.forwardRef<
                 "sticky top-0 z-30 h-screen",
                 "border-r border-secondary-theme bg-primary-theme",
                 "transition-all duration-300 ease-in-out",
-                expanded ? "w-64" : "w-20",
+                expanded ? "w-64" : "w-18",
                 className
             )}
             {...props}

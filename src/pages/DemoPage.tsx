@@ -63,7 +63,7 @@ export const DemoPage = () => {
                 </SidebarFooter>
             </Sidebar>
 
-            <main className="flex-1 min-w-0 bg-slate-950">
+            <main className="flex-1 min-w-0 bg-neutral-950">
                 <header className="h-16 border-b border-secondary-theme flex items-center px-4 bg-primary-theme sticky top-0 z-20">
                     <SidebarTrigger />
                     <h1 className="ml-4 text-lg font-semibold text-white">Dashboard</h1>

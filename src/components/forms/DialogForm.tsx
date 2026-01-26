@@ -19,7 +19,7 @@ export const DialogForm = () => {
     };
 
     return (
-        <div className="flex-center h-screen bg-slate-900">
+        <div className="flex-center h-100">
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogTrigger variant="secondary">Edit Profile</DialogTrigger>
 
