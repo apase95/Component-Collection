@@ -16,7 +16,10 @@ const Pagination = React.forwardRef<
         ref={ref}
         role="navigation"
         aria-label="pagination"
-        className={cn("mx-auto flex w-full justify-center", className)}
+        className={cn(
+            "mx-auto w-full flex justify-center", 
+            className
+        )}
         {...props}
     />
 ));
@@ -98,7 +101,7 @@ const PaginationPrevious = React.forwardRef<
         aria-label="Go to previous page"
         size="default"
         className={cn(
-            "gap-1 pl-2.5", 
+            "", 
             className
         )}
         ref={ref}
@@ -120,7 +123,7 @@ const PaginationNext = React.forwardRef<
         aria-label="Go to next page"
         size="default"
         className={cn(
-            "gap-1 pr-2.5", 
+            "", 
             className
         )}
         ref={ref}

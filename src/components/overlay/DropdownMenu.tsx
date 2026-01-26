@@ -79,7 +79,13 @@ interface DropdownMenuContentProps extends React.HTMLAttributes<HTMLDivElement>{
 const DropdownMenuContent = React.forwardRef<
     HTMLDivElement, 
     DropdownMenuContentProps
->(({ className, align = "center", sideOffset = 4, children, ...props }, ref) => {
+>(({ 
+    className, 
+    align = "center", 
+    sideOffset = 4, 
+    children, 
+    ...props 
+}, ref) => {
     
     const { open } = useDropdown();
     if (!open) return null;
@@ -95,10 +101,11 @@ const DropdownMenuContent = React.forwardRef<
             ref={ref}
             role="menu"
             className={cn(
-                "absolute z-50 min-w-32 overflow-hidden rounded-md border border-glass-border p-1 shadow-md",
-                "bg-slate-900/95 backdrop-blur-md text-slate-200",
+                "absolute z-50 min-w-32 overflow-hidden rounded-md", 
+                "mt-2 p-1", 
+                "bg-primary-theme text-slate-300",
+                "border border-secondary-theme shadow-md backdrop-blur-md",
                 "animate-in fade-in zoom-in-95 slide-in-from-top-2 duration-200",
-                "mt-2",
                 alignments[align],
                 className
             )}
@@ -132,8 +139,12 @@ const DropdownMenuItem = React.forwardRef<
                 setOpen(false);
             }}
             className={cn(
-                "relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors",
-                "hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white",
+                "relative flex items-center rounded-sm ",
+                "p-2 text-sm",
+                "cursor-pointer select-none outline-none",
+                "hover:bg-secondary-theme hover:text-white", 
+                "focus:bg-secondary-theme focus:text-white",
+                "transition-colors",
                 disabled && "pointer-events-none opacity-50",
                 className
             )}
@@ -151,7 +162,7 @@ const DropdownMenuLabel = React.forwardRef<
     <div
         ref={ref}
         className={cn(
-            "px-2 py-1.5 text-xs font-semibold text-slate-400", 
+            "px-2 py-1.5 text-sm font-semibold text-slate-300", 
             className
         )}
         {...props}
@@ -167,7 +178,7 @@ const DropdownMenuSeparator = React.forwardRef<
     <div
         ref={ref}
         className={cn(
-            "-mx-1 my-1 h-px bg-glass-border", 
+            "-mx-1 my-1 h-px bg-secondary-theme", 
             className
         )}
         {...props}

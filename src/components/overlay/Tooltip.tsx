@@ -113,9 +113,10 @@ const TooltipContent = React.forwardRef<
             id={id}
             role="tooltip"
             className={cn(
-                "absolute z-50 rounded-md px-3 py-1.5 text-xs font-medium",
-                "bg-slate-900 text-white shadow-xl",
-                "border border-glass-border",
+                "absolute z-50 rounded-md", 
+                "px-2 py-2 text-sm text-white font-medium",
+                "bg-primary-theme shadow-xl",
+                "border border-secondary-theme",
                 positions[side],
                 animations[side],
                 className

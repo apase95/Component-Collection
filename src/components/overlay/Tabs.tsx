@@ -76,8 +76,8 @@ const TabsList = React.forwardRef<
             role="tablist"
             aria-orientation={orientation}
             className={cn(
-                "inline-flex items-center justify-center rounded-md p-1",
-                "text-slate-400 bg-[#18181b] border border-white/10",
+                "flex-center flex-row rounded-md p-1",
+                "text-slate-400 bg-primary-theme border border-white/10",
                 orientation === "vertical" ? "flex-col h-fit w-auto" : "h-10 w-full",
                 className
             )}
