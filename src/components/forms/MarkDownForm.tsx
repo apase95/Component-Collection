@@ -17,7 +17,7 @@ export const MarkDownForm = () => {
     return (
         <div className="container-app section grid grid-cols-1 xl:grid-cols-[1fr_280px] gap-8 items-start">
             <main className="min-w-0">
-                <div className="p-6 rounded-xl border border-glass-border bg-glass-surface backdrop-blur-md">
+                <div className="p-6 bg-primary-theme rounded-xl border border-secondary-theme backdrop-blur-md">
                      <h1 className="text-4xl font-bold text-white mb-6">Title Of Blogs</h1>
                      
                      <MarkdownContent content={content} />

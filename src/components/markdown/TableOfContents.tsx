@@ -128,7 +128,7 @@ export const TableOfContents = ({ content, className }: TableOfContentsProps) =>
             aria-label="Table of contents"
         >
             <h4 className="font-semibold text-[#c9d1d9] mb-3 px-2">On this page</h4>
-            <ul className="space-y-0.5 border-l-2 border-[#30363d]">
+            <ul className="space-y-0.5 border-l-2 border-secondary-theme">
                 {headings.map((h) => (
                     <li key={h.id}>
                         <a
@@ -138,8 +138,8 @@ export const TableOfContents = ({ content, className }: TableOfContentsProps) =>
                                 "block py-1.5 px-3 transition-colors border-l-2 -ml-0.5",
                                 h.level === 3 && "pl-6",
                                 activeId === h.id
-                                    ? "text-[#2f81f7] border-[#2f81f7] font-medium bg-[#2f81f71a]"
-                                    : "text-[#8b949e] border-transparent hover:text-[#c9d1d9] hover:border-[#8b949e]"
+                                    ? "text-white bg-primary-theme border-white font-medium"
+                                    : "text-slate-500 border-transparent hover:text-slate-300 hover:border-slate-300"
                             )}
                         >
                             {h.text}
