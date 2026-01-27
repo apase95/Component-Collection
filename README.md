@@ -29,7 +29,7 @@ A modern **Dark Theme UI Component Collection** built with **React + TypeScript 
 
 --- ---
 ### Sidebar
-<img width="956" height="496" alt="image" src="https://github.com/user-attachments/assets/9f6caded-5e8b-47e5-9a67-def0eefcdb40" />
+<img width="953" height="496" alt="image" src="https://github.com/user-attachments/assets/8bacc556-e719-4c53-b5f5-2dad15ceddb1" />
 
 --- ---
 ### Button Component
