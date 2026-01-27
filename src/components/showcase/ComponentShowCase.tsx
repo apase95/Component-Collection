@@ -222,7 +222,7 @@ const ShowcaseCode = React.forwardRef<
         <div
             ref={ref}
             className={cn(
-                "w-full min-h-87.5 p-4 overflow-x-auto bg-slate-950",
+                "w-full min-h-87.5 p-4 overflow-x-auto bg-primary-theme",
                 className
             )}
             {...props}
