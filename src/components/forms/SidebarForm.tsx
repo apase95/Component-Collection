@@ -12,10 +12,10 @@ export const SidebarForm = () => {
             <Sidebar>
                 <SidebarHeader>
                     <div className="flex items-center gap-2 font-bold text-white text-xl overflow-hidden">
-                        <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center shrink-0">
+                        <div className="w-8 h-8 bg-accent rounded-lg flex-center shrink-0">
                             UI
                         </div>
-                        <span className="whitespace-nowrap">GlassUI</span>
+                        <span className="whitespace-nowrap">Dark UI</span>
                     </div>
                 </SidebarHeader>
 

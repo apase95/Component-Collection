@@ -71,7 +71,7 @@ export const DemoPage = () => {
 
                 <div className="container-app section">
                     <div className="text-center space-y-2">
-                        <Typography variant="h1">Glass UI Kit</Typography>
+                        <Typography variant="h1">Dark UI Kit</Typography>
                         <Typography variant="body">Component collection for developers</Typography>
                     </div>
 
