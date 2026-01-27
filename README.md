@@ -1,73 +1,157 @@
-# React + TypeScript + Vite
+# 🌙 Component UX/UI Collection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19-61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4)
+![Vite](https://img.shields.io/badge/Vite-Project-646CFF)
+![React Icons](https://img.shields.io/badge/React_Icons-Latest-EB1F6A)
+![Markdown](https://img.shields.io/badge/React_Markdown-Plugin-000000)
 
-Currently, two official plugins are available:
+A modern **Dark Theme UI Component Collection** built with **React + TypeScript + Tailwind CSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+## 🎨 Design Style
+- Dark background
+- Soft borders
+- Low contrast highlights
+- Rounded corners
+- Minimal shadows
+- Keyboard-friendly focus states
 
-## React Compiler
+## ✨ Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Header
+<img width="938" height="57" alt="image" src="https://github.com/user-attachments/assets/eed1fb7c-b4b2-45ee-9658-0afe85ba9e6f" />
 
-## Expanding the ESLint configuration
+--- ---
+### Footer
+<img width="924" height="318" alt="image" src="https://github.com/user-attachments/assets/1c9d5f1f-bd9a-4276-8719-bea2bc8f8bce" />
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+--- ---
+### Sidebar
+<img width="956" height="496" alt="image" src="https://github.com/user-attachments/assets/9f6caded-5e8b-47e5-9a67-def0eefcdb40" />
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+--- ---
+### Button Component
+<img width="898" height="391" alt="image" src="https://github.com/user-attachments/assets/545d2289-22b9-4d08-81b0-6b48b578982d" />
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+--- ---
+### Card Component
+<img width="472" height="318" alt="image" src="https://github.com/user-attachments/assets/c34a6370-604f-4a44-af63-fdd1295b0304" />
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+--- ---
+### Tabs Component
+<img width="394" height="343" alt="image" src="https://github.com/user-attachments/assets/e774edaa-71e1-41dd-b977-9c8b0c364047" />
+
+--- ---
+### Scroll Area
+<img width="260" height="358" alt="image" src="https://github.com/user-attachments/assets/f91fbf3c-770d-4eb8-93cf-270c982b98e3" />
+
+--- ---
+### Select Item
+<img width="221" height="320" alt="image" src="https://github.com/user-attachments/assets/903708db-6bc3-4e63-a136-066664b7ac87" />
+
+--- ---
+### Dialog Form
+<img width="436" height="318" alt="image" src="https://github.com/user-attachments/assets/8aae7e07-fc84-4a5e-8858-edba6523c994" />
+
+--- ---
+### Upload Form
+<img width="403" height="422" alt="image" src="https://github.com/user-attachments/assets/8f7c315f-08d0-4b7d-8585-d1a7698c342a" />
+
+--- ---
+### MarkDown Renderer & Table of Content
+<img width="1082" height="425" alt="image" src="https://github.com/user-attachments/assets/557cc549-5583-455d-ae10-8eff4bdc76b8" />
+
+--- ---
+### 🧭 Navigation Components
+- Pagination
+- MenuBar
+- NavigationBar
+- DropdownMenu
+
+### 💬 Feedback Components
+- Alert
+- AlertStatus
+- PageLoader
+- Spinner
+- Skeleton
+
+### 🎚 Controls
+- Slider
+- Switch
+- Button
+- Progress
+
+### ✍️ Form Elements
+- Typography
+- Textarea
+- PasswordToggleField
+- Input,...
+
+## 📁 Folder Structure
+```txt
+src
+ ├─ assets
+ ├─ components
+ │   ├─ base
+ │   ├─ data-display
+ │   ├─ feedback
+ │   ├─ forms
+ │   ├─ media
+ │   ├─ markdown
+ │   ├─ navigation
+ │   ├─ overlay
+ │   └─ showcase
+ │
+ ├─ hooks
+ │   ├─ usePagination.ts
+ │   └─ useFileUpload.ts
+ │
+ ├─ libs
+ │   └─ utils.ts
+ │
+ ├─ pages
+ │   ├─ HomePage.tsx
+ │   ├─ DemoPage.tsx
+ │   └─ DemoSwitch.tsx
+ │
+ ├─ App.tsx
+ ├─ main.tsx
+ └─ index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Tech Stack
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Vite
+- React Icons
+- React Markdown
+- clsx + tailwind-merge
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📌 Example Usage
+```javascript
+<Button variant="secondary">
+  Save
+</Button>
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+<Select>
+  <SelectTrigger>
+    <SelectValue placeholder="Choose item" />
+  </SelectTrigger>
+
+  <SelectContent>
+    <SelectItem value="apple">Apple</SelectItem>
+    <SelectItem value="banana">Banana</SelectItem>
+  </SelectContent>
+</Select>
 ```
+
+## 📬 Contact
+- Email: hodtduy.work@gmail.com
+- Linked In: [hodangthaiduy](https://www.linkedin.com/in/duy-ho-dang-thai-a33159383/)  
+
+--- ---
+### Thank you for checking this project!
+Happy coding 💻
